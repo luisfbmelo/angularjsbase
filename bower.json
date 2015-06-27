@@ -1,0 +1,19 @@
+{
+  "name": "Project",
+  "version": "1.0.0",
+  "authors": [
+    "Luis Melo <geral@luisfbmelo.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    
+  },
+  "description": "",
+  "main": "index.html",
+  "homepage": "index.html"
+}

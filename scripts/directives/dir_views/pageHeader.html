@@ -1,0 +1,74 @@
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#/"><img class="ajustIcon" src=""></a>
+        </div>
+        <div class="navbar-collapse collapse in">
+            <ul class="nav navbar-nav">
+                <li><a href="#/project">PROJETO</a></li>
+                <li class="dropdown active">
+                    <a href="" class="dropdown-toggle" data-toggle="dropdown">NOTÍCIAS <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#/news">LER NOTÍCIAS</a></li>
+                        <li><a href="#/news/add">ADICIONAR NOTÍCIA</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="" class="dropdown-toggle" data-toggle="dropdown">CONCURSOS <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#/contests">VER CONCURSOS</a></li>
+                        <li><a href="#/contests/add">ADICIONAR CONCURSO</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="" class="dropdown-toggle" data-toggle="dropdown">EVENTOS <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#/events">LER EVENTOS</a></li>
+                        <li><a href="#/events/add">ADICIONAR EVENTO</a></li>
+                        <li><a href="#/events/myevents">OS MEUS EVENTOS</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="" class="dropdown-toggle" data-toggle="dropdown">ARTISTAS <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#/artists">TODOS</a></li>
+                        <li ng-repeat="option in menuOptions | orderBy:option.art">
+                            <a href="#/artists/{{option.id_arts}}">{{option.art}}</a>
+                        </li>                        
+                    </ul>
+                </li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                <!-- NORMAL LOGIN -->
+                <li class="dropdown" ng-if="loggedin && logType == 1">
+                    <a href="#/" class="dropdown-toggle capsText" data-toggle="dropdown">LUIS <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#/arts/artist/2">MEU PERFIL</a></li>
+                        <li><a href="#/arts/edit/2">EDITAR PERFIL</a></li>
+                        <li><a href="#/logout">SAIR</a></li>
+                    </ul>
+                </li>
+
+                <!-- TERRY LOGIN -->
+                <li class="dropdown" ng-if="loggedin && logType == 2">
+                    <a href="#/" class="dropdown-toggle" data-toggle="dropdown">TERRY COSTA <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#/arts/artist/1">MEU PERFIL</a></li>
+                        <li><a href="#/arts/edit/1">EDITAR PERFIL</a></li>
+                        <li><a href="#/logout">SAIR</a></li>
+                    </ul>
+                </li>
+
+                <!-- NO LOGIN -->
+                <li ng-if="!loggedin"><a href="#/enter">ENTRAR</a></li>
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div>
+</div>
