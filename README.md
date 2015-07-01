@@ -29,4 +29,4 @@ This will compile all SCSS files, minify CSS and concatenate and uglify the java
 With this, the system will stay in watch for any change in tese files and execute the corresponding tasks.
 
 ##License
-My website is licensed under **The MIT License (MIT)**, see the LICENSE file for more details.
+The project is licensed under **The MIT License (MIT)**, see the LICENSE file for more details.
