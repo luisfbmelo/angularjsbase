@@ -10,6 +10,7 @@ To setup the development environment, it is necessary to install:
 - Ruby
 - Grunt
 - Sass
+- Compass
 
 After installing these requirements, run the following commands in the website's folder:
 ```
@@ -25,7 +26,7 @@ Th first command will install all dependencies and the second will install Bower
 $ grunt
 ```
 
-This will compile all SCSS files, minify CSS and concatenate and uglify the javascript.
+This will compile all SCSS files with Compass, minify CSS and concatenate and uglify the Javascript.
 With this, the system will stay in watch for any change in tese files and execute the corresponding tasks.
 
 ##License
