@@ -10,7 +10,7 @@ To setup the development environment, it is necessary to install:
 - Ruby
 - Grunt
 - Sass
-- Compass
+- Compass (also need to install grunt-contrib-compass. Unable to push to github due to "filename too long")
 
 After installing these requirements, run the following commands in the website's folder:
 ```
